@@ -1,0 +1,83 @@
+# =========================
+# Unity
+# =========================
+
+[Ll]ibrary/
+[Tt]emp/
+[Oo]bj/
+[Bb]uild/
+[Bb]uilds/
+[Ll]ogs/
+[Uu]ser[Ss]ettings/
+[Mm]emoryCaptures/
+[Rr]ecordings/
+
+# Asset Store tools
+[Aa]ssets/AssetStoreTools*
+
+# =========================
+# IDE / Editor
+# =========================
+
+# Visual Studio
+.vs/
+*.csproj
+*.sln
+*.suo
+*.user
+*.userprefs
+*.pidb
+*.booproj
+*.svd
+*.pdb
+*.mdb
+*.opendb
+*.VC.db
+
+# Rider / IntelliJ
+.idea/
+*.sln.iml
+
+# VS Code
+.vscode/
+
+# =========================
+# Unity generated files
+# =========================
+
+sysinfo.txt
+
+# Crash reports
+crashlytics-build.properties
+crashlytics-build.properties
+
+# =========================
+# Operating system
+# =========================
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# =========================
+# Builds / packages
+# =========================
+
+*.apk
+*.aab
+*.unitypackage
+
+# =========================
+# Misc
+# =========================
+
+*.tmp
+*.bak
+*.swp
+*.log
