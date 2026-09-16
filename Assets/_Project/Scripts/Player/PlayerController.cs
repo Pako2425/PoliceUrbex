@@ -5,7 +5,8 @@ using UnityEngine.InputSystem;
 public class PlayerController : MonoBehaviour
 {
     [Header("Movement")]
-    [SerializeField] private float moveSpeed = 4f;
+    [SerializeField] private float walkSpeed = 4f;
+    [SerializeField] private float sprintSpeed = 6.5f;
     [SerializeField] private float gravity = -20f;
 
     [Header("Look")]
@@ -20,6 +21,8 @@ public class PlayerController : MonoBehaviour
 
     private float verticalVelocity;
     private float cameraPitch;
+    
+    private bool isSprinting;
 
     private void Awake()
     {
@@ -65,7 +68,9 @@ public class PlayerController : MonoBehaviour
             verticalVelocity += gravity * Time.deltaTime;
         }
 
-        Vector3 velocity = moveDirection * moveSpeed;
+        float currentSpeed = isSprinting ? sprintSpeed : walkSpeed;
+
+		Vector3 velocity = moveDirection * currentSpeed;
         velocity.y = verticalVelocity;
 
         characterController.Move(velocity * Time.deltaTime);
@@ -88,4 +93,9 @@ public class PlayerController : MonoBehaviour
         cameraHolder.localRotation =
             Quaternion.Euler(cameraPitch, 0f, 0f);
     }
+    
+    public void OnSprint(InputValue value)
+	{
+		isSprinting = value.isPressed;
+	}
 }
