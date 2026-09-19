@@ -345,13 +345,13 @@ Nie wszystkie muszą być osobnymi klasami. Architektura może być uproszczona 
 
 ## MILESTONE 0 — konfiguracja projektu
 
-- [ ] utworzyć nowy projekt Unity 6 URP
-- [ ] ustawić repozytorium Git
-- [ ] dodać `.gitignore` dla Unity
-- [ ] ustawić `Visible Meta Files`
-- [ ] ustawić `Asset Serialization = Force Text`
-- [ ] utworzyć podstawową strukturę folderów
-- [ ] zrobić pierwszy commit
+- [x] utworzyć nowy projekt Unity 6 URP
+- [x] ustawić repozytorium Git
+- [x] dodać `.gitignore` dla Unity
+- [x] ustawić `Visible Meta Files`
+- [x] ustawić `Asset Serialization = Force Text`
+- [x] utworzyć podstawową strukturę folderów
+- [x] zrobić pierwszy commit
 
 ### Proponowana struktura
 
@@ -384,15 +384,15 @@ Cel:
 
 > Gracz może chodzić po prostej testowej scenie 3D.
 
-- [ ] utworzyć `Prototype.unity`
-- [ ] podłoga
-- [ ] ściany
-- [ ] kamera FPS
-- [ ] movement
-- [ ] mouse look
-- [ ] sprint
-- [ ] podstawowe kolizje
-- [ ] testowy build gry
+- [x] utworzyć `Prototype.unity`
+- [x] podłoga
+- [x] ściany
+- [x] kamera FPS
+- [x] movement
+- [x] mouse look
+- [x] sprint
+- [x] podstawowe kolizje
+- [x] testowy build gry
 
 ---
 
