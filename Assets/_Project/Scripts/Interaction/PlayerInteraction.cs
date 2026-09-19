@@ -49,39 +49,47 @@ public class PlayerInteraction : MonoBehaviour
     }
 
     private void UpdatePrompt()
-{
-    if (interactionPromptText == null)
-    {
-        return;
-    }
+	{
+		if (interactionPromptText == null)
+		{
+			return;
+		}
 
-    if (currentInteractable == previousInteractable)
-    {
-        return;
-    }
+		if (currentInteractable == previousInteractable)
+		{
+			return;
+		}
 
-    previousInteractable = currentInteractable;
+		previousInteractable = currentInteractable;
 
-    if (currentInteractable != null)
-    {
-        interactionPromptText.text =
-            $"[E] {currentInteractable.InteractionPrompt}";
+		if (currentInteractable != null)
+		{
+			interactionPromptText.text =
+				$"[E] {currentInteractable.InteractionPrompt}";
 
-        interactionPromptText.gameObject.SetActive(true);
-    }
-    else
-    {
-        interactionPromptText.gameObject.SetActive(false);
-    }
-}
+			interactionPromptText.gameObject.SetActive(true);
+		}
+		else
+		{
+			interactionPromptText.gameObject.SetActive(false);
+		}
+	}
 
     public void OnInteract(InputValue value)
-    {
-        if (!value.isPressed)
-        {
-            return;
-        }
+	{
+		if (!value.isPressed)
+		{
+			return;
+		}
 
-        currentInteractable?.Interact();
-    }
+		if (currentInteractable == null)
+		{
+			return;
+		}
+
+		currentInteractable.Interact();
+
+		previousInteractable = null;
+		UpdatePrompt();
+	}
 }
