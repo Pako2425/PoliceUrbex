@@ -250,6 +250,20 @@ To tutaj spada gracz.
 - odjazd,
 - zakończenie.
 
+### Zaplanowany set piece — magazyn i hałas
+
+W jednym z magazynów gracz będzie musiał przeszukiwać regały, pudła i składowane przedmioty w poszukiwaniu konkretnej rzeczy potrzebnej do dalszego postępu.
+
+W trakcie przeszukiwania ma dojść do kontrolowanego zdarzenia:
+
+- gracz przypadkowo strąca przedmiot lub kilka przedmiotów z półki,
+- upadek powoduje bardzo głośny hałas w magazynie,
+- hałas przyciąga potwora w okolice gracza,
+- spokojne przeszukiwanie przechodzi nagle w sekwencję napięcia / ukrywania się / ucieczki,
+- zdarzenie ma pokazać graczowi, że generowany hałas może mieć realne konsekwencje dla zachowania przeciwnika.
+
+Dokładny akt i miejsce w przebiegu gry pozostają do ustalenia. Sekwencja powinna być zaprojektowana po powstaniu systemów audio triggerów oraz `EnemyHearing`.
+
 ---
 
 ## 8. Zasady level designu
@@ -708,7 +722,8 @@ Eksperyment nie oznacza jeszcze ukończenia punktów MILESTONE 3.
 - po wykonaniu interakcji prompt jest wymuszanie odświeżany, aby od razu pokazać nowy stan obiektu,
 - drzwi obracają się przez osobny obiekt pełniący rolę zawiasu,
 - przełącznik może sterować innym GameObjectem przez referencję ustawioną w Inspectorze,
-- finalna gra ma wykorzystywać ciemność i latarkę jako ważny element eksploracji i napięcia.
+- finalna gra ma wykorzystywać ciemność i latarkę jako ważny element eksploracji i napięcia,
+- planowany jest set piece w magazynie, w którym hałas wywołany podczas przeszukiwania regałów przyciąga potwora; ma on wykorzystać przyszłe systemy audio triggerów i `EnemyHearing`.
 
 ### Znane problemy
 
@@ -871,4 +886,11 @@ Dodać `DoorController` implementujący `IInteractable` i stworzyć pierwsze drz
 ### Następne zadanie
 
 Dodać proste podnoszenie przedmiotu, a potem testowy telefon z nagraniem i zamknąć MILESTONE 2.
+
+### Nowy pomysł fabularno-gameplayowy
+
+- zaplanowano sekwencję w magazynie: gracz przeszukuje regały i pudła w poszukiwaniu konkretnego przedmiotu,
+- podczas przeszukiwania przypadkowo strąca coś z półki i generuje duży hałas,
+- hałas przyciąga potwora i rozpoczyna dynamiczną sekwencję napięcia,
+- dokładne umiejscowienie w akcie gry zostanie ustalone później.
 
