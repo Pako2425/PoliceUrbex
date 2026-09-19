@@ -406,8 +406,8 @@ Cel:
 - [x] raycast z kamery
 - [x] interfejs obiektów interaktywnych
 - [x] prompt interakcji
-- [ ] otwieranie drzwi
-- [ ] prosty przycisk / przełącznik
+- [x] otwieranie drzwi
+- [x] prosty przycisk / przełącznik
 - [ ] podnoszenie przedmiotu
 - [ ] testowy telefon
 
@@ -590,7 +590,7 @@ Od tego momentu nie dodajemy dużych nowych systemów.
 
 **Data startu:** 16.09.2026  
 **Ostatnia aktualizacja:** 19.09.2026  
-**Aktywny branch:** `feature/interactions`
+**Aktywny branch produkcyjny:** `feature/interactions`
 
 ### Zakończone
 
@@ -605,6 +605,9 @@ Od tego momentu nie dodajemy dużych nowych systemów.
 - [x] interfejs `IInteractable`
 - [x] testowy obiekt interaktywny
 - [x] prompt interakcji TextMeshPro
+- [x] interaktywne drzwi
+- [x] interaktywny przełącznik światła
+- [x] natychmiastowe odświeżanie promptu po zmianie stanu obiektu
 
 ### MILESTONE 1 — stan
 
@@ -620,12 +623,12 @@ Gotowe:
 - [x] `IInteractable`
 - [x] prompt `[E] ...`
 - [x] prompt pojawia się tylko dla aktualnie wykrytego obiektu
-- [x] UI promptu jest aktualizowane tylko po zmianie wykrytego `IInteractable`
+- [x] prompt odświeża się po interakcji bez konieczności odwracania wzroku
+- [x] `DoorController` — płynne otwieranie i zamykanie drzwi
+- [x] `LightSwitch` — przełącznik sterujący innym obiektem `Light`
 
 Do zrobienia:
 
-- [ ] otwieranie drzwi
-- [ ] prosty przycisk / przełącznik
 - [ ] podnoszenie przedmiotu
 - [ ] testowy telefon
 
@@ -661,7 +664,35 @@ IInteractable
 Interact()
 ```
 
-Każdy obiekt interaktywny implementuje `IInteractable` i udostępnia własny `InteractionPrompt`.
+Obecne implementacje `IInteractable`:
+
+```text
+TestInteractable
+DoorController
+LightSwitch
+```
+
+Każdy obiekt interaktywny udostępnia własny `InteractionPrompt`.
+
+### Eksperyment — ciemność i latarka
+
+Poza kolejnością milestone'ów wykonano szybki prototyp poruszania się w ciemności z latarką.
+
+Sprawdzone:
+
+- bardzo ciemne `Environment Lighting`,
+- wyłączone / ograniczone `Environment Reflections`,
+- latarka jako `Spot Light` przypięta do `Main Camera`,
+- `FlashlightController`,
+- akcja `Flashlight` w Unity Input System,
+- przełączanie latarki klawiszem `F`,
+- chodzenie po ciemnej scenie z latarką jako głównym źródłem widoczności.
+
+Wniosek:
+
+> Kierunek gameplayowy działa i warto go zachować. Finalne strojenie zasięgu, kąta, intensywności, audio i zachowania latarki zostanie wykonane w MILESTONE 3.
+
+Eksperyment nie oznacza jeszcze ukończenia punktów MILESTONE 3.
 
 ### Ustalone decyzje
 
@@ -673,7 +704,11 @@ Każdy obiekt interaktywny implementuje `IInteractable` i udostępnia własny `I
 - raycast interakcji wychodzi z `Main Camera`,
 - bazowy zasięg interakcji to 3 m,
 - prompt jest UI na `Canvas`, a nie tekstem 3D w świecie,
-- prompt TextMeshPro nie jest przepisywany co klatkę — zmienia się dopiero po zmianie aktualnego obiektu.
+- prompt TextMeshPro nie jest przepisywany co klatkę,
+- po wykonaniu interakcji prompt jest wymuszanie odświeżany, aby od razu pokazać nowy stan obiektu,
+- drzwi obracają się przez osobny obiekt pełniący rolę zawiasu,
+- przełącznik może sterować innym GameObjectem przez referencję ustawioną w Inspectorze,
+- finalna gra ma wykorzystywać ciemność i latarkę jako ważny element eksploracji i napięcia.
 
 ### Znane problemy
 
@@ -683,7 +718,7 @@ Każdy obiekt interaktywny implementuje `IInteractable` i udostępnia własny `I
 
 ### Następne zadanie
 
-Stworzyć pierwsze drzwi implementujące `IInteractable`, które można otwierać i zamykać klawiszem `E`.
+Wrócić do MILESTONE 2 i dodać proste podnoszenie przedmiotu, a następnie testowy telefon z nagraniem.
 
 ---
 
@@ -804,4 +839,36 @@ Rozpocząć MILESTONE 0 i utworzyć projekt Unity 6 URP.
 ### Następne zadanie
 
 Dodać `DoorController` implementujący `IInteractable` i stworzyć pierwsze drzwi otwierane / zamykane klawiszem `E`.
+
+---
+
+## 2026-09-19 — sesja 2
+
+### Zrobione
+
+- dodano `DoorController` implementujący `IInteractable`,
+- dodano płynne otwieranie i zamykanie drzwi,
+- dodano dynamiczny prompt `Otwórz drzwi / Zamknij drzwi`,
+- dodano `LightSwitch` sterujący komponentem `Light`,
+- dodano dynamiczny prompt `Włącz światło / Wyłącz światło`,
+- poprawiono odświeżanie promptu po zmianie stanu interaktywnego obiektu,
+- wykonano eksperymentalny test bardzo ciemnego wnętrza,
+- wykonano prototyp latarki jako `Spot Light` przy `Main Camera`,
+- dodano testowe sterowanie latarką klawiszem `F`,
+- potwierdzono, że eksploracja ciemnej sceny z latarką jest właściwym kierunkiem dla gry.
+
+### Zmienione decyzje
+
+- przed dokończeniem MILESTONE 2 wykonano celowy, krótki eksperyment z latarką,
+- eksperyment nie zmienia kolejności produkcji: wracamy do MILESTONE 2,
+- finalne strojenie latarki zostaje na MILESTONE 3.
+
+### Problemy
+
+- brak nowych problemów blokujących gameplay,
+- eksperymentalny branch latarki nie jest jeszcze widoczny w zdalnym repozytorium GitHub.
+
+### Następne zadanie
+
+Dodać proste podnoszenie przedmiotu, a potem testowy telefon z nagraniem i zamknąć MILESTONE 2.
 
