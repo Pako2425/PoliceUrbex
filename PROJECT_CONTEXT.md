@@ -111,6 +111,7 @@ Najważniejsze zasady:
 
 ### Na ten moment NIE robimy
 
+- skakania — świadoma decyzja gameplayowa; gracz nie ma mechaniki jump,
 - craftingu,
 - rozbudowanego ekwipunku,
 - otwartego świata,
@@ -392,7 +393,7 @@ Cel:
 - [x] mouse look
 - [x] sprint
 - [x] podstawowe kolizje
-- [x] testowy build gry
+- [ ] testowy build gry — profil Windows skonfigurowany, ale lokalny build jest obecnie blokowany przez Windows Application Control / Burst
 
 ---
 
@@ -402,9 +403,9 @@ Cel:
 
 > Można wejść do prostego pomieszczenia i wejść w interakcję z obiektami.
 
-- [ ] raycast z kamery
-- [ ] interfejs obiektów interaktywnych
-- [ ] prompt interakcji
+- [x] raycast z kamery
+- [x] interfejs obiektów interaktywnych
+- [x] prompt interakcji
 - [ ] otwieranie drzwi
 - [ ] prosty przycisk / przełącznik
 - [ ] podnoszenie przedmiotu
@@ -587,36 +588,102 @@ Od tego momentu nie dodajemy dużych nowych systemów.
 
 # 13. AKTUALNY STAN
 
-**Data startu:** 16.09.2026
+**Data startu:** 16.09.2026  
+**Ostatnia aktualizacja:** 19.09.2026  
+**Aktywny branch:** `feature/interactions`
 
-### Gotowe
+### Zakończone
 
-- [x] ogólny pomysł fabularny
-- [x] wybrany silnik: Unity
-- [x] Unity zainstalowane
-- [x] ustalony gatunek
-- [x] ustalony przybliżony układ fabryki
-- [x] ustalone główne piętra
-- [x] ustalony główny przebieg historii
+- [x] MILESTONE 0 — konfiguracja projektu
+- [x] podstawowa scena `Prototype.unity`
+- [x] FPS movement
+- [x] mouse look
+- [x] sprint
+- [x] podstawowe kolizje
+- [x] konfiguracja profilu builda Windows
+- [x] podstawowy system interakcji przez raycast
+- [x] interfejs `IInteractable`
+- [x] testowy obiekt interaktywny
+- [x] prompt interakcji TextMeshPro
+
+### MILESTONE 1 — stan
+
+Gameplay milestone'u działa w edytorze. Pozostaje ponowić testowy build Windows po rozwiązaniu lokalnego problemu z Burst / Windows Application Control.
 
 ### Aktualny milestone
 
-**MILESTONE 0 — konfiguracja projektu**
+**MILESTONE 2 — interakcje**
+
+Gotowe:
+
+- [x] raycast z kamery
+- [x] `IInteractable`
+- [x] prompt `[E] ...`
+- [x] prompt pojawia się tylko dla aktualnie wykrytego obiektu
+- [x] UI promptu jest aktualizowane tylko po zmianie wykrytego `IInteractable`
+
+Do zrobienia:
+
+- [ ] otwieranie drzwi
+- [ ] prosty przycisk / przełącznik
+- [ ] podnoszenie przedmiotu
+- [ ] testowy telefon
+
+### Aktualna architektura interakcji
+
+```text
+Player
+├── CharacterController
+├── PlayerInput
+├── PlayerController
+├── PlayerInteraction
+│
+└── CameraHolder
+    └── Main Camera
+
+Canvas
+└── InteractionPrompt
+```
+
+Przepływ interakcji:
+
+```text
+PlayerInput
+    ↓
+OnInteract()
+    ↓
+PlayerInteraction
+    ↓
+raycast z Main Camera
+    ↓
+IInteractable
+    ↓
+Interact()
+```
+
+Każdy obiekt interaktywny implementuje `IInteractable` i udostępnia własny `InteractionPrompt`.
+
+### Ustalone decyzje
+
+- gracz nie ma mechaniki skoku,
+- ruch gracza używa `CharacterController`,
+- input korzysta z Unity Input System i `PlayerInput`,
+- `PlayerInput` działa w trybie `Send Messages`,
+- interakcje są oparte o wspólny interfejs `IInteractable`,
+- raycast interakcji wychodzi z `Main Camera`,
+- bazowy zasięg interakcji to 3 m,
+- prompt jest UI na `Canvas`, a nie tekstem 3D w świecie,
+- prompt TextMeshPro nie jest przepisywany co klatkę — zmienia się dopiero po zmianie aktualnego obiektu.
+
+### Znane problemy
+
+- lokalny build Windows był blokowany przez Windows Application Control podczas ładowania `Burst.Compiler.IL`,
+- błąd dotyczy środowiska / Burst, a nie kodu gameplayowego,
+- do ponownego sprawdzenia po naprawie środowiska.
 
 ### Następne zadanie
 
-1. Utworzyć projekt Unity 6 w URP.
-2. Utworzyć repozytorium Git.
-3. Dodać projekt do GitHuba.
-4. Skonfigurować `.gitignore`.
-5. Ustawić `Visible Meta Files`.
-6. Ustawić `Force Text`.
-7. Utworzyć foldery projektu.
-8. Wykonać pierwszy commit.
-
-Po zakończeniu przejść do:
-
-**MILESTONE 1 — pierwsza grywalna scena.**
+Stworzyć pierwsze drzwi implementujące `IInteractable`, które można otwierać i zamykać klawiszem `E`.
 
 ---
 
@@ -703,3 +770,38 @@ Po każdej większej sesji dopisuj wpis.
 ### Następne zadanie
 
 Rozpocząć MILESTONE 0 i utworzyć projekt Unity 6 URP.
+
+---
+
+## 2026-09-19
+
+### Zrobione
+
+- zakończono MILESTONE 0,
+- zbudowano grywalny prototyp ruchu FPS,
+- dodano chodzenie, mouse look i sprint,
+- skonfigurowano profil builda Windows,
+- utworzono branch `feature/interactions`,
+- dodano `IInteractable`,
+- dodano `PlayerInteraction`,
+- dodano raycast interakcji z kamery,
+- dodano testowy obiekt `Test_Interactable`,
+- dodano prompt interakcji w TextMeshPro,
+- zoptymalizowano prompt tak, aby UI aktualizowało się tylko po zmianie wykrytego obiektu.
+
+### Zmienione decyzje
+
+- gracz nie będzie posiadał mechaniki skoku,
+- wszystkie standardowe interakcje mają korzystać ze wspólnego interfejsu `IInteractable`,
+- tekst promptu jest dostarczany przez konkretny obiekt interaktywny,
+- UI promptu działa w `Screen Space - Overlay`.
+
+### Problemy
+
+- pierwszy build Windows został zablokowany przez Windows Application Control podczas ładowania biblioteki `Burst.Compiler.IL`,
+- problem pozostaje do ponownego przetestowania po naprawie środowiska.
+
+### Następne zadanie
+
+Dodać `DoorController` implementujący `IInteractable` i stworzyć pierwsze drzwi otwierane / zamykane klawiszem `E`.
+
