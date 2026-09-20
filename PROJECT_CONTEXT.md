@@ -24,41 +24,95 @@ Projekt ma być możliwy do ukończenia przez jedną osobę przy wsparciu ChatGP
 
 ## 2. Główna fabuła
 
-Gra zaczyna się od nagrania rozmowy telefonicznej.
+Gra rozpoczyna się od nagrania zgłoszenia na policję.
 
-Grupa nastolatków eksploruje opuszczoną fabrykę. Dzwonią po pomoc. Jeden z ich kolegów zaginął, nie mogą znaleźć wyjścia i słyszą / widzą coś niepokojącego.
+Grupa nastolatków eksploruje opuszczoną fabrykę. Podają adres, mówią chaotycznie, że potrzebują pomocy, jeden z ich kolegów ma kłopoty i nie potrafią wydostać się z obiektu.
 
-Po rozmowie gra przenosi się do radiowozu.
+Po nagraniu akcja przenosi się do radiowozu.
 
-Gracz wciela się w policjanta lub policjantkę jadącą na miejsce razem z partnerką / partnerem.
+Gracz wciela się w policjanta lub policjantkę jadącą na miejsce razem z partnerką. Radiowóz zatrzymuje się przed uszkodzoną bramą wjazdową, przez którą samochód nie przejedzie, ale policjanci mogą wejść pieszo.
 
-Po wejściu do fabryki:
+Początek gry jest spokojny. Policjanci:
 
-- początkowo nic wyraźnie nadnaturalnego się nie dzieje,
-- policjanci eksplorują obiekt,
-- znajdują ślady obecności nastolatków,
-- w jednym z pomieszczeń pod graczem załamuje się stara drewniana podłoga,
-- partner zostaje wyżej,
-- gracz spada do głębokiej piwnicy,
-- od tego momentu głównym celem jest wydostanie się z fabryki i odnalezienie partnera.
+- oglądają teren fabryki,
+- sprawdzają dok załadunkowy,
+- obchodzą budynek i parking,
+- szukają legalnego / możliwego wejścia,
+- znajdują drzwi wejściowe zamknięte grubym łańcuchem,
+- dostają się do środka przez wybite okno przy ustawionej obok drabinie.
 
-W trakcie gry gracz znajduje:
+Podczas przechodzenia przez okno partnerka gubi radio. Ma to fabularnie odciąć możliwość późniejszej łatwej komunikacji.
 
-- ciała nastolatków,
-- telefony,
-- nagrania,
-- notatki,
-- ślady wydarzeń,
-- informacje sugerujące, jak zachowywać się wobec istoty, która grasuje w fabryce.
+W środku policjanci eksplorują obiekt i znajdują pierwsze poszlaki po nastolatkach. W pewnym momencie pod graczem załamuje się stara drewniana podłoga.
 
-Jedno z nagrań ma charakter pożegnalny i jednocześnie pełni funkcję ostrzeżenia / tutorialu dotyczącego zachowania przeciwnika.
+Preferowany obecnie wariant:
+
+- gracz spada na poziom niżej, a nie od razu do najgłębszej piwnicy,
+- partnerka zostaje wyżej,
+- podczas upadku gracz gubi własne radio i broń,
+- pozostaje mu latarka i podstawowa apteczka,
+- po upadku jest oszołomiony i musi się opatrzyć,
+- świadomość, że pod aktualnym poziomem istnieje jeszcze głębsza piwnica, ma zwiększać napięcie.
+
+Pierwszy cel po upadku:
+
+> Spotkaj się z partnerką.
+
+Gracz eksploruje ciemniejszy poziom, otwiera kolejne drzwi i słyszy niepokojące dźwięki. W pewnym momencie słyszy partnerkę wołającą z góry. Chwilę później z wyższego poziomu dochodzi ryk potwora oraz kroki zmierzające w stronę jej głosu.
+
+Po odnalezieniu schodów gracz wraca piętro wyżej, w okolice magazynu / hali produkcyjnej. Widzi partnerkę uciekającą w panice. Następnie słyszy strzały, jej krzyk, wrzask potwora i nagłą ciszę.
+
+Po dalszej eksploracji gracz:
+
+- może znaleźć pierwsze ciało jednego z nastolatków,
+- dociera do ciała partnerki,
+- zabiera jej broń oraz kluczyki do radiowozu.
+
+Od tego momentu priorytet fabularny zmienia się z akcji ratunkowej na ucieczkę z fabryki.
+
+Pierwotna droga wejścia jest niedostępna z powodu ogromnej wyrwy w podłodze. Drugim realnym wyjściem staje się dok załadunkowy, ale jego brama jest zamknięta grubym łańcuchem.
+
+Plan ucieczki:
+
+- znaleźć narzędzie do przecięcia łańcucha,
+- przywrócić część zasilania fabryki,
+- uruchomić kątówkę,
+- przeciąć łańcuch,
+- otworzyć bramę doku,
+- dobiec do radiowozu i odjechać.
+
+Na hali produkcyjnej gracz znajduje kątówkę zasilaną przewodowo, więc potrzebuje prądu.
+
+W jednym z biur znajduje ciało nastolatka, który najwyraźniej ukrywał się tam po odniesieniu ciężkich ran. Przy ciele leży telefon z nagraniem pożegnalnym. Nastolatek ostrzega, że w fabryce grasuje bardzo szybka, silna i inteligentna bestia, która poluje na ludzi i po zabiciu ofiar natychmiast zaczyna je pożerać.
+
+W tym samym rejonie gracz znajduje dokument / fakturę dotyczącą paliwa do generatora znajdującego się na najniższym poziomie fabryki.
+
+Gracz schodzi do głębokiej piwnicy. Panuje tam niemal całkowity mrok. Znajduje generator, ale okazuje się, że brakuje paliwa. Panel elektryczny sugeruje, że generator zasila między innymi magazyn.
+
+Gracz wraca do magazynu i przeszukuje regały oraz pudła w poszukiwaniu kanistra. W trakcie przeszukiwania przypadkowo powoduje duży hałas — coś spada z półki albo stary regał częściowo się przewraca.
+
+Hałas przyciąga potwora. Gracz musi się ukryć i przeczekać, obserwując jak stwór przeszukuje magazyn.
+
+Po odnalezieniu paliwa gracz wraca do generatora, uzupełnia go i uruchamia. Generator pracuje bardzo głośno i maskuje dźwięki otoczenia.
+
+W pobliskim korytarzu żarówki zaczynają migać. Na moment wszystkie gasną, a potem rozświetlają się, pokazując sylwetkę potwora na końcu korytarza. Po zauważeniu gracza potwór rusza do ataku.
+
+Gracz musi uciekać, ewentualnie używając broni do chwilowego spowolnienia przeciwnika. Chroni się w pokoju technicznym i zatrzaskuje drzwi. Potwór zaczyna się przez nie dobijać.
+
+Jedyną drogą ucieczki jest kanał wentylacyjny. Gracz wyrywa kratę, wchodzi do środka i czołga się szybem, słysząc za sobą wyważenie drzwi i ryk stworzenia.
+
+Wentylacja prowadzi z powrotem w okolice magazynu / hali.
+
+Po przywróceniu zasilania gracz może użyć kątówki, wraca do doku załadunkowego, podłącza narzędzie do gniazdka i przecina łańcuch.
 
 Finał:
 
-- gracz wydostaje się z fabryki,
-- dociera do radiowozu,
-- uruchamia samochód,
-- odjeżdża z miejsca zdarzenia.
+- otwarcie bramy doku,
+- ucieczka z fabryki,
+- sprint do radiowozu,
+- użycie kluczyków partnerki,
+- uruchomienie samochodu,
+- odjazd z miejsca zdarzenia.
 
 ---
 
@@ -107,7 +161,9 @@ Najważniejsze zasady:
 - menu,
 - ustawienia podstawowe,
 - napisy,
-- finał z ucieczką do radiowozu.
+- finał z ucieczką do radiowozu,
+- ograniczona broń służąca do spowalniania potwora,
+- sprawdzanie amunicji przez animację magazynka zamiast klasycznego licznika HUD.
 
 ### Na ten moment NIE robimy
 
@@ -130,23 +186,36 @@ Jeżeli pojawi się pomysł na nową mechanikę, najpierw należy sprawdzić, cz
 
 ## 5. Broń
 
-Początkowo gracz nie powinien swobodnie korzystać z broni.
+Broń ma pojawić się dopiero po śmierci partnerki i nie może zmienić gry w shooter.
 
-Preferowany wariant:
+Przebieg:
 
-- policjant ma broń podczas przyjazdu,
-- po upadku do piwnicy traci do niej dostęp,
-- broń może pojawić się dopiero później,
-- amunicja ma być bardzo ograniczona,
-- broń nie może zamienić horroru w shooter.
+- gracz ma własną broń podczas przyjazdu,
+- traci ją podczas upadku przez załamaną podłogę,
+- przez pierwszą część właściwego horroru pozostaje bez broni,
+- po odnalezieniu ciała partnerki zabiera jej pistolet,
+- broń służy głównie do odstraszania / chwilowego spowalniania potwora,
+- przeciwnika nie da się zabić.
 
-Ten punkt może jeszcze ulec zmianie.
+Aktualne założenie amunicji:
+
+- dwa magazynki,
+- jeden częściowo zużyty — roboczo około 6 naboi,
+- drugi pełny,
+- brak klasycznego HUD-u z dokładną liczbą amunicji.
+
+Planowana mechanika sprawdzania amunicji:
+
+- przytrzymanie `G` powoduje wyjęcie magazynka i wizualne sprawdzenie pozostałych naboi,
+- gracz ma oceniać zapas na podstawie animacji / wyglądu magazynka zamiast licznika na ekranie.
+
+Dokładna pojemność magazynków, balans i zachowanie broni będą ustalane dopiero przy prototypowaniu combat / enemy interaction.
 
 ---
 
 ## 6. Układ fabryki
 
-Fabryka ma cztery główne poziomy:
+Fabryka ma cztery główne poziomy. Dokładny układ może się jeszcze zmienić podczas blockoutu, ale obecnie preferowany jest wariant, w którym po załamaniu podłogi gracz trafia na poziom -1, a dopiero później świadomie schodzi do najgłębszej piwnicy -2.
 
 ### +1 — piętro pod dachem
 
@@ -157,112 +226,138 @@ Fabryka ma cztery główne poziomy:
 - kładka nad halą,
 - widok na główną halę.
 
-### 0 — parter
+### 0 — parter / hala produkcyjna
 
-- wejście,
-- recepcja,
-- portiernia / ochrona,
+- wejście przez wybite okno,
+- recepcja / portiernia,
 - korytarze,
 - biura,
-- szatnia,
-- toalety,
 - główna hala produkcyjna,
 - magazyn,
-- miejsce załamania podłogi.
+- dok załadunkowy,
+- miejsce załamania podłogi,
+- obszar odnalezienia partnerki,
+- kątówka potrzebna do finałowej ucieczki.
 
-### -1 — poziom techniczny
+### -1 — poziom techniczny / poziom po upadku
 
-- kotłownia,
+- miejsce upadku,
+- ciemne korytarze,
 - warsztat,
 - rozdzielnia,
 - magazyn części,
 - tunele techniczne,
-- rury,
-- zawory,
-- betonowe korytarze.
+- rury i zawory,
+- droga prowadząca z powrotem na parter.
+
+To tutaj rozpoczyna się właściwa samotna eksploracja po rozdzieleniu z partnerką.
 
 ### -2 — głęboka piwnica
 
-To tutaj spada gracz.
+Najciemniejszy i bardziej klaustrofobiczny poziom.
 
-- miejsce upadku,
-- stary magazyn,
-- archiwum,
-- stary warsztat,
-- pompownia,
-- generator,
-- szyb techniczny,
-- pierwsze ważne ciało,
-- telefon z nagraniem,
-- pierwsze wyraźne informacje o zagrożeniu.
+- generator awaryjny,
+- panel bezpieczników,
+- pomieszczenie generatora,
+- pokój techniczny,
+- korytarz prowadzący do sekwencji pościgu,
+- kanał wentylacyjny będący drogą awaryjnej ucieczki.
+
+Wejście na -2 powinno być świadomą decyzją gracza podjętą później w fabule, tak aby odkrycie jeszcze głębszego poziomu zwiększało poczucie zagrożenia.
 
 ---
 
 ## 7. Progres gry
 
-### Akt I — przyjazd
+### Akt I — przyjazd i wejście
 
-- rozmowa alarmowa / nagranie,
-- przejazd radiowozem,
-- rozmowa policjantów,
-- wejście do fabryki,
+- nagranie zgłoszenia nastolatków,
+- przyjazd radiowozu pod uszkodzoną bramę,
+- wejście na teren fabryki pieszo,
+- oględziny zamkniętego doku załadunkowego,
+- obejście fabryki i parkingu,
+- odnalezienie drzwi wejściowych zamkniętych łańcuchem,
+- wejście przez wybite okno przy drabinie,
+- partnerka gubi radio podczas przechodzenia,
 - spokojna eksploracja,
-- pierwsze ślady nastolatków,
-- załamanie podłogi.
+- pierwsze poszlaki po nastolatkach,
+- załamanie podłogi pod graczem.
 
-### Akt II — piwnica
+### Akt II — rozdzielenie
 
-- gracz budzi się po upadku,
-- odzyskuje latarkę,
-- próbuje skontaktować się przez radio,
-- znajduje pierwsze ciało,
-- znajduje telefon,
-- poznaje pierwsze zasady zagrożenia,
-- uruchamia generator,
-- szuka wyjścia.
+- gracz budzi się / dochodzi do siebie po upadku na poziomie -1,
+- traci własną broń i radio,
+- zostaje mu latarka,
+- używa apteczki i opatruje obrażenia,
+- otrzymuje cel: spotkać się z partnerką,
+- eksploruje ciemny poziom,
+- słyszy partnerkę nawołującą z góry,
+- słyszy ryk i kroki potwora zmierzającego w jej stronę,
+- odnajduje drogę z powrotem na parter.
 
-### Akt III — poziom techniczny
+### Akt III — śmierć partnerki i zmiana celu
 
-- bardziej klaustrofobiczna eksploracja,
-- pierwsze prawdziwe spotkanie z przeciwnikiem,
-- przejście z -1 na parter.
+- gracz trafia w okolice magazynu / hali produkcyjnej,
+- widzi partnerkę uciekającą,
+- słyszy strzały, krzyk i odgłosy potwora,
+- po drodze może znaleźć pierwsze ciało nastolatka,
+- znajduje ciało partnerki,
+- zabiera jej pistolet oraz kluczyki do radiowozu,
+- droga do pierwotnego wejścia jest odcięta przez zawaloną podłogę,
+- nowym głównym celem staje się ucieczka z fabryki.
 
-### Akt IV — ponowny parter
+### Akt IV — plan ucieczki
 
-- partnera nie ma,
-- pojawiają się nowe ślady,
-- część wcześniej znanych miejsc wygląda inaczej,
-- prowadzenie gracza na +1.
+- gracz dociera do doku załadunkowego,
+- stwierdza, że bramę blokuje gruby łańcuch,
+- szuka narzędzia do przecięcia łańcucha,
+- znajduje przewodową kątówkę na hali produkcyjnej,
+- odkrywa, że w fabryce nie ma zasilania,
+- dalsza eksploracja prowadzi do biura,
+- w biurze znajduje martwego nastolatka i jego telefon,
+- odtwarza nagranie pożegnalne / ostrzeżenie o potworze,
+- znajduje dokument dotyczący paliwa do generatora,
+- dowiaduje się o generatorze na najniższym poziomie.
 
-### Akt V — piętro +1
+### Akt V — generator i magazyn
 
-- dalsze informacje fabularne,
-- odnalezienie partnera lub informacji o nim,
-- sekwencja kulminacyjna,
-- ucieczka przez fabrykę.
+- gracz schodzi do poziomu -2,
+- znajduje generator,
+- odkrywa brak paliwa,
+- panel elektryczny sugeruje powiązanie z magazynem,
+- wraca do magazynu,
+- przeszukuje regały i pudła w poszukiwaniu kanistra,
+- przypadkowo generuje bardzo duży hałas,
+- hałas przyciąga potwora,
+- gracz musi się ukryć i przeczekać,
+- po odejściu stworzenia odnajduje paliwo,
+- wraca do generatora,
+- uzupełnia paliwo i uruchamia zasilanie.
 
-### Finał
+### Akt VI — pościg i wentylacja
 
-- sprint do wyjścia,
-- parking,
-- radiowóz,
-- odpalenie silnika,
-- odjazd,
-- zakończenie.
+- generator maskuje część dźwięków otoczenia,
+- oświetlenie w pobliskim korytarzu zaczyna migać,
+- chwilowe rozświetlenie ujawnia potwora na końcu korytarza,
+- rozpoczyna się pościg,
+- gracz może używać broni do chwilowego spowalniania przeciwnika,
+- ucieka do pokoju technicznego i zatrzaskuje drzwi,
+- potwór zaczyna się dobijać,
+- gracz wyrywa kratę wentylacyjną,
+- ucieka szybem,
+- słyszy wyważenie drzwi i ryk stwora,
+- wychodzi z wentylacji w okolice magazynu / hali.
 
-### Zaplanowany set piece — magazyn i hałas
+### Finał — dok i radiowóz
 
-W jednym z magazynów gracz będzie musiał przeszukiwać regały, pudła i składowane przedmioty w poszukiwaniu konkretnej rzeczy potrzebnej do dalszego postępu.
-
-W trakcie przeszukiwania ma dojść do kontrolowanego zdarzenia:
-
-- gracz przypadkowo strąca przedmiot lub kilka przedmiotów z półki,
-- upadek powoduje bardzo głośny hałas w magazynie,
-- hałas przyciąga potwora w okolice gracza,
-- spokojne przeszukiwanie przechodzi nagle w sekwencję napięcia / ukrywania się / ucieczki,
-- zdarzenie ma pokazać graczowi, że generowany hałas może mieć realne konsekwencje dla zachowania przeciwnika.
-
-Dokładny akt i miejsce w przebiegu gry pozostają do ustalenia. Sekwencja powinna być zaprojektowana po powstaniu systemów audio triggerów oraz `EnemyHearing`.
+- gracz wraca po kątówkę,
+- podłącza ją do działającego gniazdka,
+- przecina łańcuch przy bramie doku,
+- wydostaje się z fabryki,
+- biegnie do radiowozu,
+- używa kluczyków partnerki,
+- uruchamia samochód,
+- odjeżdża.
 
 ---
 
@@ -464,30 +559,38 @@ Bez szczegółowych modeli.
 
 ## MILESTONE 5 — sekwencja początku gry
 
-- [ ] nagranie rozmowy alarmowej
-- [ ] przyjazd radiowozu
-- [ ] partner policjant
-- [ ] wejście do fabryki
-- [ ] pierwszy dialog
+- [ ] nagranie zgłoszenia nastolatków
+- [ ] przyjazd radiowozu pod uszkodzoną bramę
+- [ ] partnerka policjantka
+- [ ] oględziny doku załadunkowego
+- [ ] obejście fabryki i parkingu
+- [ ] odnalezienie wejścia przez wybite okno
+- [ ] utrata radia przez partnerkę przy wejściu
+- [ ] pierwszy dialog / spokojna eksploracja
 - [ ] ślady nastolatków
 - [ ] event załamania podłogi
-- [ ] upadek do -2
-- [ ] utrata kontaktu z partnerem
+- [ ] upadek gracza na poziom -1
+- [ ] utrata własnego radia i broni
+- [ ] użycie apteczki po upadku
+- [ ] objective: spotkaj się z partnerką
 
 Po tym milestone powinna istnieć pierwsza grywalna sekwencja około 5–10 minut.
 
 ---
 
-## MILESTONE 6 — piwnica
+## MILESTONE 6 — rozdzielenie i ponowny parter
 
-- [ ] blockout poziomu -2
-- [ ] odzyskanie latarki
-- [ ] radio
-- [ ] pierwsze ciało
-- [ ] telefon z nagraniem
-- [ ] generator
-- [ ] prosty objective
-- [ ] wyjście na -1
+- [ ] blockout poziomu -1
+- [ ] samotna eksploracja po upadku
+- [ ] dźwięki / nawoływanie partnerki
+- [ ] pierwszy sygnał obecności potwora
+- [ ] droga z -1 na parter
+- [ ] sekwencja ucieczki partnerki
+- [ ] strzały i śmierć partnerki
+- [ ] odnalezienie pierwszego ciała nastolatka
+- [ ] odnalezienie ciała partnerki
+- [ ] przejęcie broni i kluczyków
+- [ ] zmiana głównego celu na ucieczkę z fabryki
 
 ---
 
@@ -503,6 +606,7 @@ Najpierw prototyp.
 - [ ] pościg
 - [ ] utrata gracza
 - [ ] reakcja na latarkę lub dźwięk — do ustalenia
+- [ ] reakcja przeciwnika na postrzał / chwilowe spowolnienie
 - [ ] death / fail state
 - [ ] checkpoint restart
 
@@ -521,6 +625,13 @@ Cel:
 - [ ] skróty
 - [ ] wszystkie objectives
 - [ ] kluczowe wydarzenia fabularne
+- [ ] dok załadunkowy i łańcuch
+- [ ] kątówka
+- [ ] biuro z telefonem nastolatka
+- [ ] generator i paliwo
+- [ ] przeszukiwanie magazynu + hałas
+- [ ] pościg przy generatorze
+- [ ] ucieczka wentylacją
 - [ ] zakończenie
 - [ ] radiowóz
 - [ ] credits
@@ -603,7 +714,7 @@ Od tego momentu nie dodajemy dużych nowych systemów.
 # 13. AKTUALNY STAN
 
 **Data startu:** 16.09.2026  
-**Ostatnia aktualizacja:** 19.09.2026  
+**Ostatnia aktualizacja:** 20.09.2026  
 **Aktywny branch produkcyjny:** `feature/interactions`
 
 ### Zakończone
@@ -724,6 +835,12 @@ Eksperyment nie oznacza jeszcze ukończenia punktów MILESTONE 3.
 - przełącznik może sterować innym GameObjectem przez referencję ustawioną w Inspectorze,
 - finalna gra ma wykorzystywać ciemność i latarkę jako ważny element eksploracji i napięcia,
 - planowany jest set piece w magazynie, w którym hałas wywołany podczas przeszukiwania regałów przyciąga potwora; ma on wykorzystać przyszłe systemy audio triggerów i `EnemyHearing`.
+- upadek po załamaniu podłogi ma obecnie prowadzić na poziom -1; najgłębsza piwnica -2 zostaje odkryta później,
+- partnerka ginie przed połową / w środkowej części gry, a gracz przejmuje jej broń i kluczyki do radiowozu,
+- broń nie zabija potwora — służy tylko do jego chwilowego spowalniania,
+- brak klasycznego licznika amunicji w HUD; planowane jest sprawdzanie magazynka po przytrzymaniu `G`,
+- finałowa droga ucieczki prowadzi przez dok załadunkowy, którego łańcuch trzeba przeciąć przewodową kątówką po przywróceniu zasilania,
+- telefon z nagraniem pojawia się dopiero później w fabule, przy ciele nastolatka ukrywającego się w biurze.
 
 ### Znane problemy
 
@@ -894,3 +1011,36 @@ Dodać proste podnoszenie przedmiotu, a potem testowy telefon z nagraniem i zamk
 - hałas przyciąga potwora i rozpoczyna dynamiczną sekwencję napięcia,
 - dokładne umiejscowienie w akcie gry zostanie ustalone później.
 
+---
+
+## 2026-09-20 — aktualizacja fabuły
+
+### Zmieniono przebieg historii
+
+- doprecyzowano wejście na teren fabryki i pierwszą eksplorację,
+- dok załadunkowy jest pokazany graczowi już na początku jako potencjalne wyjście,
+- wejście do fabryki prowadzi przez wybite okno obok zamkniętych łańcuchem drzwi,
+- partnerka gubi radio podczas wejścia,
+- po załamaniu podłogi gracz trafia preferencyjnie na poziom -1 zamiast od razu do najgłębszej piwnicy,
+- gracz podczas upadku traci własne radio i broń,
+- po śmierci partnerki przejmuje jej pistolet i kluczyki do radiowozu,
+- główny cel zmienia się z odnalezienia partnerki na ucieczkę z fabryki,
+- droga ucieczki prowadzi przez zamknięty dok załadunkowy,
+- do przecięcia łańcucha potrzebna jest przewodowa kątówka,
+- przywrócenie prądu wymaga generatora i paliwa,
+- telefon z nagraniem pożegnalnym nastolatka pojawia się dopiero w późniejszej części gry,
+- przeszukiwanie magazynu w poszukiwaniu paliwa powoduje hałas przyciągający potwora,
+- po uruchomieniu generatora następuje sekwencja ujawnienia potwora, pościgu i ucieczki wentylacją,
+- finał prowadzi przez dok do radiowozu.
+
+### Broń
+
+- przeciwnika nie da się zabić,
+- broń służy do chwilowego spowalniania potwora,
+- planowane są dwa magazynki,
+- brak dokładnego licznika amunicji w HUD,
+- przytrzymanie `G` ma służyć do wizualnego sprawdzenia stanu magazynka.
+
+### Następne zadanie produkcyjne
+
+Kontynuować odbudowę minimalnej sceny testowej i domknąć MILESTONE 2 przez działający system podnoszenia przedmiotów.
