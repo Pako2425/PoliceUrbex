@@ -517,7 +517,11 @@ Cel:
 - [x] prompt interakcji
 - [x] otwieranie drzwi
 - [x] prosty przycisk / przełącznik
-- [ ] podnoszenie przedmiotu
+- [x] podnoszenie przedmiotu
+
+**Status: ZAKOŃCZONY.**
+
+Telefon z nagraniem nie należy już do tego milestone'u. Zostaje na późniejszy etap fabularny, gdy będziemy budować właściwą scenę z ciałem nastolatka, audio i nagraniem.
 - [ ] testowy telefon
 
 ---
@@ -714,33 +718,35 @@ Od tego momentu nie dodajemy dużych nowych systemów.
 # 13. AKTUALNY STAN
 
 **Data startu:** 16.09.2026  
-**Ostatnia aktualizacja:** 20.09.2026  
+**Ostatnia aktualizacja:** 21.09.2026  
 **Aktywny branch produkcyjny:** `feature/interactions`
 
 ### Zakończone
 
 - [x] MILESTONE 0 — konfiguracja projektu
+- [x] MILESTONE 2 — podstawowe interakcje
 - [x] podstawowa scena `Prototype.unity`
 - [x] FPS movement
 - [x] mouse look
 - [x] sprint
 - [x] podstawowe kolizje
 - [x] konfiguracja profilu builda Windows
-- [x] podstawowy system interakcji przez raycast
+- [x] system interakcji przez raycast
 - [x] interfejs `IInteractable`
-- [x] testowy obiekt interaktywny
 - [x] prompt interakcji TextMeshPro
+- [x] testowy obiekt interaktywny
 - [x] interaktywne drzwi
 - [x] interaktywny przełącznik światła
 - [x] natychmiastowe odświeżanie promptu po zmianie stanu obiektu
+- [x] `PlayerInventory`
+- [x] `PickupItem`
+- [x] test podnoszenia przedmiotu i zapisu jego ID w ekwipunku
 
 ### MILESTONE 1 — stan
 
 Gameplay milestone'u działa w edytorze. Pozostaje ponowić testowy build Windows po rozwiązaniu lokalnego problemu z Burst / Windows Application Control.
 
-### Aktualny milestone
-
-**MILESTONE 2 — interakcje**
+### MILESTONE 2 — zakończony
 
 Gotowe:
 
@@ -749,13 +755,14 @@ Gotowe:
 - [x] prompt `[E] ...`
 - [x] prompt pojawia się tylko dla aktualnie wykrytego obiektu
 - [x] prompt odświeża się po interakcji bez konieczności odwracania wzroku
-- [x] `DoorController` — płynne otwieranie i zamykanie drzwi
-- [x] `LightSwitch` — przełącznik sterujący innym obiektem `Light`
+- [x] `DoorController`
+- [x] `LightSwitch`
+- [x] `PlayerInventory`
+- [x] `PickupItem`
+- [x] przedmiot po podniesieniu znika ze świata
+- [x] ID zebranego przedmiotu jest zapisywane w `PlayerInventory`
 
-Do zrobienia:
-
-- [ ] podnoszenie przedmiotu
-- [ ] testowy telefon
+Telefon z nagraniem został świadomie przeniesiony na późniejszy etap fabularny.
 
 ### Aktualna architektura interakcji
 
@@ -765,6 +772,7 @@ Player
 ├── PlayerInput
 ├── PlayerController
 ├── PlayerInteraction
+├── PlayerInventory
 │
 └── CameraHolder
     └── Main Camera
@@ -795,19 +803,30 @@ Obecne implementacje `IInteractable`:
 TestInteractable
 DoorController
 LightSwitch
+PickupItem
 ```
 
-Każdy obiekt interaktywny udostępnia własny `InteractionPrompt`.
+Pickup:
+
+```text
+PickupItem
+    ↓
+PlayerInventory.AddItem(itemId)
+    ↓
+ID trafia do HashSet
+    ↓
+obiekt znika ze sceny
+```
 
 ### Eksperyment — ciemność i latarka
 
-Poza kolejnością milestone'ów wykonano szybki prototyp poruszania się w ciemności z latarką.
+Poza kolejnością milestone'ów wykonano prototyp poruszania się w ciemności z latarką.
 
 Sprawdzone:
 
 - bardzo ciemne `Environment Lighting`,
-- wyłączone / ograniczone `Environment Reflections`,
-- latarka jako `Spot Light` przypięta do `Main Camera`,
+- ograniczone `Environment Reflections`,
+- latarka jako `Spot Light` przy `Main Camera`,
 - `FlashlightController`,
 - akcja `Flashlight` w Unity Input System,
 - przełączanie latarki klawiszem `F`,
@@ -815,9 +834,7 @@ Sprawdzone:
 
 Wniosek:
 
-> Kierunek gameplayowy działa i warto go zachować. Finalne strojenie zasięgu, kąta, intensywności, audio i zachowania latarki zostanie wykonane w MILESTONE 3.
-
-Eksperyment nie oznacza jeszcze ukończenia punktów MILESTONE 3.
+> Kierunek gameplayowy działa i warto go zachować. Finalne strojenie latarki i audio zostaje na kolejny etap.
 
 ### Ustalone decyzje
 
@@ -830,27 +847,55 @@ Eksperyment nie oznacza jeszcze ukończenia punktów MILESTONE 3.
 - bazowy zasięg interakcji to 3 m,
 - prompt jest UI na `Canvas`, a nie tekstem 3D w świecie,
 - prompt TextMeshPro nie jest przepisywany co klatkę,
-- po wykonaniu interakcji prompt jest wymuszanie odświeżany, aby od razu pokazać nowy stan obiektu,
+- po wykonaniu interakcji prompt jest wymuszanie odświeżany,
 - drzwi obracają się przez osobny obiekt pełniący rolę zawiasu,
-- przełącznik może sterować innym GameObjectem przez referencję ustawioną w Inspectorze,
+- przełącznik może sterować innym GameObjectem przez referencję z Inspectora,
+- `PlayerInventory` przechowuje techniczne ID ważnych zebranych przedmiotów,
+- nie tworzymy rozbudowanego ekwipunku RPG; inventory ma obsługiwać przedmioty potrzebne do progresji,
+- telefon z nagraniem zostaje na późniejszy etap fabularny,
 - finalna gra ma wykorzystywać ciemność i latarkę jako ważny element eksploracji i napięcia,
-- planowany jest set piece w magazynie, w którym hałas wywołany podczas przeszukiwania regałów przyciąga potwora; ma on wykorzystać przyszłe systemy audio triggerów i `EnemyHearing`.
+- planowany jest set piece w magazynie, w którym hałas przyciąga potwora i wykorzystuje przyszły `EnemyHearing`,
 - upadek po załamaniu podłogi ma obecnie prowadzić na poziom -1; najgłębsza piwnica -2 zostaje odkryta później,
-- partnerka ginie przed połową / w środkowej części gry, a gracz przejmuje jej broń i kluczyki do radiowozu,
+- partnerka ginie w trakcie gry, a gracz przejmuje jej broń i kluczyki do radiowozu,
 - broń nie zabija potwora — służy tylko do jego chwilowego spowalniania,
 - brak klasycznego licznika amunicji w HUD; planowane jest sprawdzanie magazynka po przytrzymaniu `G`,
-- finałowa droga ucieczki prowadzi przez dok załadunkowy, którego łańcuch trzeba przeciąć przewodową kątówką po przywróceniu zasilania,
-- telefon z nagraniem pojawia się dopiero później w fabule, przy ciele nastolatka ukrywającego się w biurze.
+- finałowa droga ucieczki prowadzi przez dok załadunkowy, którego łańcuch trzeba przeciąć przewodową kątówką po przywróceniu zasilania.
+
+### Zasada pracy z Unity i Git
+
+Zmiany wykonane w Hierarchy / Inspectorze są zapisywane w pliku sceny `.unity` i muszą być commitowane razem z mechaniką, jeśli stan sceny jest częścią funkcjonalności.
+
+Przed każdym commitem i każdą zmianą brancha:
+
+```text
+Ctrl+S w Unity
+↓
+wyjście z Play Mode
+↓
+zamknięcie Unity
+↓
+git status
+↓
+commit lub stash wszystkich potrzebnych zmian
+↓
+dopiero checkout innego brancha
+```
+
+Przy mechanikach opartych o obiekty sceny należy zawsze sprawdzić, czy zmienił się `Prototype.unity` lub prefab.
 
 ### Znane problemy
 
 - lokalny build Windows był blokowany przez Windows Application Control podczas ładowania `Burst.Compiler.IL`,
-- błąd dotyczy środowiska / Burst, a nie kodu gameplayowego,
-- do ponownego sprawdzenia po naprawie środowiska.
+- problem dotyczy środowiska / Burst, a nie kodu gameplayowego,
+- testowy build trzeba ponowić po naprawie środowiska.
 
-### Następne zadanie
+### Następny etap
 
-Wrócić do MILESTONE 2 i dodać proste podnoszenie przedmiotu, a następnie testowy telefon z nagraniem.
+Po scaleniu `feature/interactions` do `main` przechodzimy do bardziej grywalnego i klimatycznego etapu:
+
+**latarka + podstawowe audio + pierwsze elementy atmosfery horroru.**
+
+Celem kolejnych sesji jest przeplatanie pracy technicznej z szybko widocznymi efektami gameplayowymi / wizualnymi, aby utrzymywać frajdę z developmentu.
 
 ---
 
@@ -1044,3 +1089,32 @@ Dodać proste podnoszenie przedmiotu, a potem testowy telefon z nagraniem i zamk
 ### Następne zadanie produkcyjne
 
 Kontynuować odbudowę minimalnej sceny testowej i domknąć MILESTONE 2 przez działający system podnoszenia przedmiotów.
+
+---
+
+## 2026-09-21 — zakończenie MILESTONE 2
+
+### Zrobione
+
+- odbudowano i poprawnie zapisano konfigurację sceny testowej po wcześniejszym braku commita pliku `Prototype.unity`,
+- potwierdzono działanie `PlayerInteraction`,
+- odtworzono `Canvas` i `InteractionPrompt`,
+- potwierdzono działanie raycastu i interakcji klawiszem `E`,
+- odtworzono i przetestowano `DoorController`,
+- odtworzono i przetestowano `LightSwitch`,
+- dodano `PlayerInventory`,
+- dodano `PickupItem`,
+- przetestowano podnoszenie przedmiotu i zapis jego ID,
+- zakończono MILESTONE 2.
+
+### Zmienione decyzje
+
+- testowy telefon z nagraniem nie jest częścią MILESTONE 2,
+- system telefonu wróci dopiero przy właściwej sekwencji fabularnej,
+- `Prototype.unity` pełni rolę Systems Lab do szybkiego testowania mechanik,
+- zmiany sceny muszą być commitowane razem z mechanikami, których dotyczą,
+- Unity powinno być zamknięte przed przełączaniem branchy.
+
+### Następne zadanie
+
+Scalić `feature/interactions` do `main`, a następnie rozpocząć etap latarki, podstawowego audio i budowania klimatu.
